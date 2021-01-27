@@ -1,4 +1,4 @@
-all: demostack dns
+all: demostack 
 .PHONY: all doormat_creds doormat_aws deploy destroy console
 TFC_ORG = pl-hashicorp 
 WORKSPACE_DEMOSTACK = boundary-demo  
