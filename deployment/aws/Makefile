@@ -1,3 +1,7 @@
+# Instructions
+# update TFC_ORG & WORKSPACE_DEMOSTACK variables
+# Use make deploy & make destroy to deploy & destroy your app
+
 all: doormat_aws
 .PHONY: all doormat_creds doormat_aws deploy destroy console
 TFC_ORG = pl-hashicorp 
