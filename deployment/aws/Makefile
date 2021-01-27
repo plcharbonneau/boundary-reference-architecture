@@ -1,4 +1,4 @@
-all: demostack 
+all: doormat_aws
 .PHONY: all doormat_creds doormat_aws deploy destroy console
 TFC_ORG = pl-hashicorp 
 WORKSPACE_DEMOSTACK = boundary-demo  
@@ -7,7 +7,7 @@ doormat_creds:
 ifneq ($(check_creds), 0)
 	doormat --refresh
 endif
-demostack: doormat_creds
+doormat_aws: doormat_creds
 	doormat aws --account se_demos_dev \
 		--tf-push --tf-organization $(TFC_ORG) \
 		--tf-workspace $(WORKSPACE_DEMOSTACK)
